@@ -1,0 +1,157 @@
+3.Different types of server ?
+Web,Application,Data , File 
+1️⃣ Web Server (HTTP,HTTS,Frontend,HTML,CSS,JS)
+
+
+
+What it does: Handles HTTP/HTTPS requests
+Serves: HTML, CSS, JS, images
+Examples:
+Apache
+Nginx
+IIS
+Example use: Serves your React frontend
+
+
+2️⃣ Application Server (business,Apis,Authentication,Node.js, MERN backend )
+
+
+
+What it does: Runs business logic
+Serves: APIs, authentication, processing
+Examples:
+Node.js (Express, Nest)
+Java Spring Boot
+Example use: Your Express backend in MERN
+
+3️⃣ Database Server (store and manage,)
+
+What it does: Stores and manages data
+Examples:
+MongoDB
+MySQL
+PostgreSQL
+Example use: MongoDB storing users, properties, orders
+
+
+4.File Server  (store and share,FTP,)
+
+What it does: Stores and shares files
+Examples:
+FTP Server
+AWS S3
+Example use: Image uploads, documents
+
+
+
+
+
+4.server vs database ?
+
+
+1. What is a Server?(recive and send response)
+
+
+
+✅ Definition
+A server is a computer/system that receives requests and sends responses over a network.
+
+
+
+
+✅ What it does (Handle,Logic,Access data,)
+
+
+
+Handles client requests (browser, mobile app)
+Runs application logic
+Controls access to data
+Communicates with databases
+
+Client → Server → Response
+
+2. What is a Database?
+✅ Definition (system ,store , organizes,manage )
+
+A database is a system that stores, organizes, and manages data.
+
+
+✅ Examples
+MongoDB
+MySQL
+PostgreSQL
+
+Server → Database → Data
+
+User (Browser)
+   ↓
+Server (Node + Express)
+   ↓
+Database (MongoDB)
+
+
+
+
+
+5. tree tier (software desing, separate layers,Presentation,Application,Data) 
+
+Three-tier architecture is a software design pattern where an application is divided into three separate layers, each with a specific responsibility.
+
+User (Browser)
+   ↓
+Presentation Tier (React)
+   ↓
+Application Tier (Node + Express)
+   ↓
+Data Tier (MongoDB)
+
+
+
+7.what is api (set of rules and endpoints,two,communicate)
+
+API (Application Programming Interface) is a set of rules and endpoints that allows two applications to communicate with each other.
+
+
+
+8.and rest api and crud operation
+
+9.put and patch
+
+10.what is req
+
+11.what is res different types of response
+
+
+12.what is node.js what is runtime .
+
+13.what is single threated and non-blocking why node.js is single threated .
+
+14.what is event-driven architechture
+
+15.why we use node.js and when we should not use node.js?
+
+16.how node.js run using v8 engine .
+
+
+17.why should we use node.js? 
+
+18.when we should not use node.js
+
+
+19.what is express.js and why we should learn this .
+
+
+20.what is express middleware 
+
+video - 5 theke start hoye jabe inshallah .
+
+
+21.Types of database 
+
+22.Database Mangement system .
+
+23.SQl and NOSQl
+
+24.Types of nosql database 
+
+25.when we should use no sql and when sql 
