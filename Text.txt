@@ -11,5 +11,27 @@
    git config --global --list
 
 
-1.to create a directory with cmd write mkdir ossam-server 
+1.to create a directory with cmd write- mkdir ossam-server
+
+How to create a server --- 
+1.npm init -y
+2.open it 
+3.pakage.json script add kore dhibho.
+4.npm i express cors 
+5.get the express code 
+
+6.set the port const port = process.env.PORT || 3000;
+bhuleo push kora jabe na .with out gitignore
+
+7.added cors
+
+8.add body parser express.json()
+
+7.added demo data
+
+8.get users all users api
+
+
+what is 
+Middleware chaining
 
