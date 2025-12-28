@@ -1,3 +1,3 @@
 1.know why we are doing in this way 
 
-1.to create a directory with cmd write mkdir ossam-server
+1.to create a directory with cmd write mkdir ossam-server ossam
