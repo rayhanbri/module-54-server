@@ -113,22 +113,89 @@ API (Application Programming Interface) is a set of rules and endpoints that all
 
 
 
-8.and rest api and crud operation
+8.What is rest api ?
 
-9.put and patch
+Rest api vs normal api
+REST = Representational State Transfer
 
-10.what is req
+A REST API is an architectural style that allows client and server to communicate using HTTP methods and JSON in a stateless way.
 
-11.what is res different types of response
+REST → How you design API URLs & methods
 
 
-12.what is node.js what is runtime .
+what is  crud operation ?
+
+CRUD operation means the four basic things you do with data in any application.
+
+CRUD = Create, Read, Update, Delete
+
+These are the core database operations.
+
+
+9.Difference between put and patch request.
+
+PUT replaces the entire resource, while PATCH updates only specific fields of a resource.
+
+10.what is req in server ? 
+
+req is the request object that contains all data sent from the client to the server, such as params, query, body, and headers.
+
+
+11.what is res different types of response? 
+
+In a server (Express / backend), a response is what the server sends back to the client after processing a request.
+
+1️⃣ Text / Plain response
+res.send('Server is running');
+
+2️⃣ JSON response (MOST COMMON)
+res.json({
+  success: true,
+  data: users
+});
+
+3️⃣ HTML response
+res.send('<h1>Welcome</h1>');
+
+4️⃣ Status code response
+res.status(404).send('Not Found');
+
+5️⃣ Redirect response
+res.redirect('/login');
+
+
+
+12.what is node.js ?
+Node.js is a JavaScript runtime environment that allows you to run JavaScript outside the browser, mainly on the server.
+
+👉 Before Node.js, JavaScript could only run in browsers.
+👉 With Node.js, JavaScript can run on servers, build APIs, handle databases, etc.
+
+
+12.1.what is runtime ?
+
+A runtime is the environment that executes your code.
+
+It provides:
+
+Engine to run the language
+
+Memory management
+
+Access to system resources (file system, network)
 
 13.what is single threated and non-blocking why node.js is single threated .
 
-14.what is event-driven architechture
+14.what is event-driven architechture ?
 
-15.why we use node.js and when we should not use node.js?
+Event-Driven Architecture is a design pattern where the flow of a system is driven by events.
+
+👉 An event = something that happens
+Example: user clicks a button, order placed, payment completed
+
+Instead of components calling each other directly, they react to events.
+
+
 
 16.how node.js run using v8 engine .
 
@@ -138,20 +205,221 @@ API (Application Programming Interface) is a set of rules and endpoints that all
 18.when we should not use node.js
 
 
-19.what is express.js and why we should learn this .
+19.what is express.js 
+
+Express.js is a lightweight web framework for Node.js used to build web servers and REST APIs easily and quickly.
+
+👉 It sits on top of Node.js and simplifies handling:
 
 
-20.what is express middleware 
 
-video - 5 theke start hoye jabe inshallah .
+19.1 Why should you learn Express.js?
+🔥 Practical reasons
+
+Build real backend APIs
+
+Core part of MERN stack
+
+Used in almost every Node.js project
+
+Industry standard
+
+Easy to learn
+
+
+20.what is express middleware ?
+
+Express middleware is a function that runs between the request (req) and the response (res) in an Express.js app.
+
+👉 It can read, modify, stop, or pass the request before it reaches the final route.
+
+Client → Middleware → Route → Response
+
+19.2   Why middleware is needed
+
+Middleware is used for:
+
+Authentication
+
+Authorization
+
+Logging
+
+Parsing data
+
+Error handling
+
+CORS
 
 
 21.Types of database 
 
-22.Database Mangement system .
+22. What  is Database Mangement system ?
 
-23.SQl and NOSQl
+A Database Management System (DBMS) is software that helps you store, organize, and manage data in a structured way. It allows users and applications to create, read, update, and delete data efficiently.
 
-24.Types of nosql database 
+In simple terms:
 
-25.when we should use no sql and when sql 
+DBMS = Software that manages your data and makes it easy to access and manipulate.
+
+23.What is  SQl ?
+
+1️⃣ SQL Databases (Relational DB)
+
+SQL = Structured Query Language
+
+Data stored in tables (rows & columns)
+
+Schema is fixed (you must define structure before inserting data)
+
+Use SQL queries to interact
+
+Features
+
+Relational (tables linked by relationships)
+
+Strong consistency
+
+ACID properties (Atomicity, Consistency, Isolation, Durability)
+
+Examples
+
+MySQL, PostgreSQL, Oracle, SQL Server
+
+
+23.1 What is NOSQl ?
+
+2️⃣ NoSQL Databases (Non-relational)
+
+Data stored in flexible formats (JSON documents, key-value, graphs, column stores)
+
+Schema-less (can store different fields in each record)
+
+Often horizontal scalable for large data
+
+Features
+
+Flexible schema
+
+Can handle large, unstructured data
+
+Eventual consistency (depends on DB)
+
+Fast for specific queries
+
+Examples
+
+MongoDB (document-based)
+
+Redis (key-value)
+
+Cassandra (column-based)
+
+24.Types of nosql database  ?
+
+1️⃣ Document-Based Database
+
+Stores data as documents (usually JSON or BSON)
+
+Each document can have different fields
+
+Great for apps with flexible or hierarchical data
+
+Examples: MongoDB, CouchDB
+
+
+2️⃣ Key-Value Database
+
+Stores data as key-value pairs
+
+Extremely fast for lookup by key
+
+Good for caching and session storage
+
+Examples: Redis, DynamoDB, Riak
+
+"user:123": { "name": "Rayhan", "email": "rayhan@gmail.com" }
+
+3️⃣ Column-Based (Wide-Column) Database
+
+Stores data in columns instead of rows
+
+Efficient for analytical queries on large datasets
+
+Often used in Big Data applications
+
+Examples: Cassandra, HBase
+
+Row Key: 1
+Columns: name=Rayhan, email=rayhan@gmail.com, role=user
+
+4️⃣ Graph Database
+
+Stores data as nodes and edges
+
+Great for relationships (social networks, recommendations)
+
+Queries follow connections between data
+
+Examples: Neo4j, ArangoDB, Amazon Neptune
+
+(Rayhan)-[:FRIEND]->(Sara)
+(Rayhan)-[:BOUGHT]->(Property1)
+
+
+
+25.when we should use no sql and when sql  ?
+
+✅ When to use SQL
+
+Structured data
+
+Tables with fixed schema, like users, products, transactions.
+
+Complex queries / Joins
+
+When you need to combine multiple tables frequently.
+
+ACID transactions required
+
+Banking apps, payment systems, booking systems.
+
+Stable schema
+
+Data structure doesn’t change often.
+
+Examples:
+
+Banking systems
+
+E-commerce order management
+
+ERP systems
+
+✅ When to use NoSQL
+
+Unstructured or semi-structured data
+
+JSON, documents, logs, chat messages, multimedia.
+
+Flexible schema / Rapid development
+
+You can add new fields anytime without altering the entire database.
+
+High scalability / Big Data
+
+Handle millions of users, high-speed writes, horizontal scaling.
+
+Event-driven / real-time applications
+
+Chat apps, social media feeds, IoT apps, notifications.
+
+Examples:
+
+MongoDB for MERN apps (users, properties, reviews)
+
+Redis for caching or sessions
+
+Cassandra for analytical data
+
+Neo4j for social networks / recommendations
